@@ -68,7 +68,15 @@ add_action('admin_menu', 'administration_add_admin_page');
 
 function cookinfamily_add_admin_pages()
 {
-    add_menu_page(__('Paramètres du thème CookInFamily', 'cookinfamily'), __('CookInFamily', 'cookinfamily'), 'manage_options', 'cookinfamily-settings', 'cookinfamily_theme_settings', 'dashicons-admin-settings', 60);
+    add_menu_page(
+        __('Paramètres du thème CookInFamily', 'cookinfamily'),
+        __('CookInFamily', 'cookinfamily'),
+        'manage_options',
+        'cookinfamily-settings',
+        'cookinfamily_theme_settings',
+        'dashicons-admin-settings',
+        60
+    );
 }
 
 
@@ -118,7 +126,7 @@ function cookinfamily_settings_fields_validate($inputs)
     }
     return $inputs;
 }
-add_action('admin_init', 'cookinfamily_settings_register');
+
 
 
 function cookinfamily_theme_settings()
